@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+}
+
+group 'xss.it.core'
+
+def jarName = 'core'
+
+repositories {
+    mavenCentral()
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+
+
+dependencies {
+}
+
+jar{
+    archiveBaseName = jarName
+    manifest {
+        attributes(
+                'name' : jarName,
+                'version': version,
+                'description': 'Javafx Lib',
+                'author': 'XSS&IT'
+        )
+    }
+}
