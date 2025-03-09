@@ -25,4 +25,5 @@ javafx {
 }
 
 dependencies {
+    implementation project(':core')
 }
